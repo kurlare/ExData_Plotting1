@@ -15,6 +15,7 @@ power_usage$Date.Time <- ymd_hms(power_usage$Date.Time)
 power_usage$Date.Time <- as.POSIXct(power_usage2$Date.Time)
 
 ## Create one graphic with four plots.
+par(mfrow = c(2,2), mar = c(4, 4, 2, 1), oma = c(0,0,0,0)) 
 with(power_usage, {
     plot(power_usage$Date.Time,power_usage$Global_active_power, 
          type = "l", xlab = "", ylab = "Global Active Power")
